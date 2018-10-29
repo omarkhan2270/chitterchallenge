@@ -10,5 +10,10 @@ class ChitterChallenge < Sinatra::Base
     erb :login
   end
 
+  post '/login/new' do
+    #whatever it does
+    redirect '/'
+  end
+
   run! if app_file == $0
 end

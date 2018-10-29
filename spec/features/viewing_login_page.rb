@@ -8,5 +8,6 @@ feature 'Viewing Chitter login page' do
     visit('/login')
     fill_in('Username', with: 'Max')
     click_button('Submit')
+    expect(page).to have_content "Chitter Challenge"
+  end
 end
-end 
