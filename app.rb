@@ -6,5 +6,9 @@ class ChitterChallenge < Sinatra::Base
     'Chitter Challenge'
   end
 
+  get '/login' do
+    erb :login
+  end
+
   run! if app_file == $0
 end
