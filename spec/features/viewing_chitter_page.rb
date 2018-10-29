@@ -1,8 +1,6 @@
-require 'rspec'
-
-feature 'Viewing Chitter' do
-  scenario 'visiting the chitter page' do
-    visit('/')
-    expect(page).to have_content "Chitter Challenge"
+feature 'Viewing Chitter login page' do
+  scenario 'visiting login page' do
+    visit('/login')
+    expect(page).to have_content "This is the login page"
   end
 end
