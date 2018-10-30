@@ -3,15 +3,17 @@ require 'user'
 describe User do
 
   describe '#username_list' do
-    expect(subject.username_list).to include 'Max'
+    it 'checks the username' do
+      expect(User.username_list).to include 'Max Francis'
+    end
   end
 
   describe '#login' do
 
     it 'checks against database' do
-      expect(subject.username_list).to include 'Max'
-      expect(subject.password_list).to include '1234'
-      expect(subject.email_list).to include 'Max.Francis@cgi.com'
+      expect(User.username_list).to include 'Max Francis'
+      expect(User.password_list).to include '1234'
+      expect(User.email_list).to include 'Max.Francis@cgi.com'
     end
 
   end

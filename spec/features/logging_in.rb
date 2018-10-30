@@ -1,9 +1,0 @@
-feature 'entering info' do
-  scenario 'entering information for login page' do
-    visit('/login')
-    fill_in('Username', with: 'Max')
-    fill_in('password', with: '1234')
-    click_button('Submit')
-    expect(page).to have_content "This is the login page"
-  end
-end
