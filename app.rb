@@ -10,6 +10,11 @@ class ChitterChallenge < Sinatra::Base
     erb :home
   end
 
+  post '/login/sign_up' do
+    User.sign_up(su_user_name: params[:user_name], su_password: params[:password], su_email: params[:email])
+    redirect '/login'
+  end
+
   post '/login/new' do
     #whatever it does
     redirect '/home'
