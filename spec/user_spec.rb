@@ -2,12 +2,6 @@ require 'user'
 
 describe User do
 
-  describe '#username_list' do
-    it 'checks the username' do
-      expect(User.username_list).to include 'Max Francis'
-    end
-  end
-
   describe '#login' do
 
     it 'checks against database' do
