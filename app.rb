@@ -12,6 +12,7 @@ class ChitterChallenge < Sinatra::Base
 
   post '/login/sign_up' do
     User.sign_up(su_user_name: params[:user_name], su_password: params[:password], su_email: params[:email])
+    p params
     redirect '/login'
   end
 
