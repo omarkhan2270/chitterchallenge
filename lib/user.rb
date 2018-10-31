@@ -8,7 +8,7 @@ class User
     else
       connection = PG.connect(dbname: 'Chitter')
     end
-    connection.exec("INSERT INTO bookmarks (user_name, password, email) VALUES('#{su_user_name}', '#{su_password}, #{su_email}') RETURNING user_name, password, email")
+    connection.exec("INSERT INTO users (user_name, password, email) VALUES('#{su_user_name}', '#{su_password}, #{su_email}') RETURNING user_name, password, email")
   end
 
   def self.username_list
