@@ -1,9 +1,9 @@
 feature 'Signing up' do
   scenario 'trying to sign up to chitter' do
     visit('/login')
-    fill_in('Sign up Username', with: '9Max Francis')
-    fill_in('Sign up Password', with: '91234')
-    fill_in('Sign up email', with: '9Max.francis@cgi.com')
+    fill_in('Sign up Username', with: 'Max Francis')
+    fill_in('Sign up Password', with: '1234')
+    fill_in('Sign up email', with: 'Max.francis@gmail.com')
     click_button('Sign up Submit')
 
     expect(User.username_list).to include 'Max Francis'
