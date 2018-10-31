@@ -2,10 +2,11 @@ require 'user'
 
 feature 'Signing up' do
   scenario 'trying to sign up to chitter' do
+    setup_test_database
     visit('/login')
     fill_in('Sign up Username', with: 'Max Francis')
     fill_in('Sign up Password', with: '1234')
-    fill_in('Sign up email', with: 'Max.francis@gmail.com')
+    fill_in('Sign up email', with: 'Max.Francis@gmail.com')
     click_button('Sign up Submit')
 
     expect(User.username_list).to include 'Max Francis'
