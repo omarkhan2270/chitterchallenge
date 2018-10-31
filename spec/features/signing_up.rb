@@ -1,3 +1,5 @@
+require 'user'
+
 feature 'Signing up' do
   scenario 'trying to sign up to chitter' do
     visit('/login')
