@@ -10,7 +10,7 @@ class ChitterChallenge < Sinatra::Base
   end
 
   get '/peep' do
-    erb :message
+    erb :peep
   end
 
   post '/peep' do
