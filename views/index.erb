@@ -1,0 +1,9 @@
+<form action="/peep" method="get">
+  <input type="submit" class="button" value="Post">
+</form>
+
+<ul>
+  <% @peep.each do |peep| %>
+  <li><%= peep.time %>:   <%= peep.peep %></li>
+  <% end %>
+</ul>

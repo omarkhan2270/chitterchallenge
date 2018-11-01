@@ -1,0 +1,78 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/omarkhan/Chitter_challenge/spec/setup_test_database.rb": [
+        1,
+        4,
+        null,
+        4,
+        null,
+        4,
+        null,
+        4,
+        null
+      ],
+      "/Users/omarkhan/Chitter_challenge/spec/features/homepage_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/omarkhan/Chitter_challenge/spec/features/post_peep_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/omarkhan/Chitter_challenge/spec/peep_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1541080458
+  }
+}
