@@ -21,19 +21,17 @@ class ChitterChallenge < Sinatra::Base
   end
 
   post '/login/sign_in' do
-    User.sign_in(li_user_name: params[:li_user_name], li_password: params[:li_password])
-    if @reg_user == 'true'
+    result = User.sign_in(li_user_name: params[:li_user_name], li_password: params[:li_password])
+    if result == true
       redirect '/home'
-    elsif @reg_user == 'false'
+    elsif result == false
       redirect '/fail'
     end
   end
 
-
-
-get 'peep/new' do
-  erb :'peep/new'
-end
+  get 'peep/new' do
+    erb :'peep/new'
+  end
 
   run! if app_file == $0
 end

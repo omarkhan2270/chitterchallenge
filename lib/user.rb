@@ -9,7 +9,6 @@ class User
       connection = PG.connect(dbname: 'Chitter')
     end
     query = "INSERT INTO users (user_name, password, email) VALUES('#{su_user_name}', '#{su_password}', '#{su_email}') RETURNING user_name, password, email;"
-    #p query
     connection.exec(query)
   end
 
@@ -20,20 +19,19 @@ class User
       connection = PG.connect(dbname: 'Chitter')
     end
     query = "SELECT user_name FROM users WHERE user_name = '#{li_user_name}' AND password = '#{li_password}';"
-    #p query
     result = connection.exec(query)
-    if result.map { |users| users['user_name']} == "#{li_user_name}"
-      @reg_user = 'true'
+    if result.map { |users| users['user_name']} == [li_user_name]
+      return true
     else
-      @reg_user = 'false'
+      return false
     end
   end
 
   def self.username_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'chitter_test')
+      connection = PG.connect(dbname: 'Chitter_test')
     else
-      connection = PG.connect(dbname: 'chitter')
+      connection = PG.connect(dbname: 'Chitter')
     end
     result = connection.exec('SELECT user_name FROM users')
     result.map { |users| users['user_name'] }
@@ -41,9 +39,9 @@ class User
 
   def self.password_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'chitter_test')
+      connection = PG.connect(dbname: 'Chitter_test')
     else
-      connection = PG.connect(dbname: 'chitter')
+      connection = PG.connect(dbname: 'Chitter')
     end
     result = connection.exec('SELECT password FROM users')
     result.map { |users| users['password'] }
@@ -51,9 +49,9 @@ class User
 
   def self.email_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'chitter_test')
+      connection = PG.connect(dbname: 'Chitter_test')
     else
-      connection = PG.connect(dbname: 'chitter')
+      connection = PG.connect(dbname: 'Chitter')
     end
     result = connection.exec('SELECT email FROM users')
     result.map { |users| users['email'] }

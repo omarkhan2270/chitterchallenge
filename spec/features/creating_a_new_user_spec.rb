@@ -9,10 +9,11 @@ feature 'Signing up' do
     fill_in('Sign up email', with: 'Max.Francis@gmail.com')
     click_button('Sign up Submit')
 
-    fill_in('Username', with: 'Max Francis')
-    fill_in('Password', with: '1234')
-    click_button('Submit')
+    expect(User.username_list).to include 'Max Francis'
+    expect(User.password_list).to include '1234'
+    expect(User.email_list).to include 'Max.Francis@gmail.com'
 
-    expect(page).to have_content "This is the home page"
+    expect(page).to have_content('This is the login page')
+
   end
 end
