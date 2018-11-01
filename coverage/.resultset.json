@@ -17,8 +17,8 @@
         null,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         0,
         0,
         0,
@@ -28,12 +28,13 @@
       ],
       "/Users/omarkhan/Chitter_challenge/spec/features/post_peep_spec.rb": [
         1,
+        1,
         null,
         1,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         0,
         0,
         0,
@@ -46,7 +47,7 @@
         1,
         1,
         1,
-        0,
+        1,
         0,
         0,
         null,
@@ -61,7 +62,7 @@
         null,
         1,
         1,
-        0,
+        1,
         0,
         null,
         0,
@@ -73,6 +74,6 @@
         null
       ]
     },
-    "timestamp": 1541080458
+    "timestamp": 1541086495
   }
 }

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'peep'
 
 feature 'feature.post' do
   scenario 'Post a message to the timeline' do
