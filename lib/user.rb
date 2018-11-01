@@ -31,9 +31,9 @@ class User
 
   def self.username_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'Chitter_test')
+      connection = PG.connect(dbname: 'chitter_test')
     else
-      connection = PG.connect(dbname: 'Chitter')
+      connection = PG.connect(dbname: 'chitter')
     end
     result = connection.exec('SELECT user_name FROM users')
     result.map { |users| users['user_name'] }
@@ -41,9 +41,9 @@ class User
 
   def self.password_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'Chitter_test')
+      connection = PG.connect(dbname: 'chitter_test')
     else
-      connection = PG.connect(dbname: 'Chitter')
+      connection = PG.connect(dbname: 'chitter')
     end
     result = connection.exec('SELECT password FROM users')
     result.map { |users| users['password'] }
@@ -51,9 +51,9 @@ class User
 
   def self.email_list
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'Chitter_test')
+      connection = PG.connect(dbname: 'chitter_test')
     else
-      connection = PG.connect(dbname: 'Chitter')
+      connection = PG.connect(dbname: 'chitter')
     end
     result = connection.exec('SELECT email FROM users')
     result.map { |users| users['email'] }
