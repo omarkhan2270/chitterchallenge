@@ -7,10 +7,26 @@ class User
       connection = PG.connect(dbname: 'Chitter_test')
     else
       connection = PG.connect(dbname: 'Chitter')
-    end  
+    end
     query = "INSERT INTO users (user_name, password, email) VALUES('#{su_user_name}', '#{su_password}', '#{su_email}') RETURNING user_name, password, email;"
-    p query
+    #p query
     connection.exec(query)
+  end
+
+  def self.sign_in(li_user_name:, li_password:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Chitter_test')
+    else
+      connection = PG.connect(dbname: 'Chitter')
+    end
+    query = "SELECT user_name FROM users WHERE user_name = '#{li_user_name}' AND password = '#{li_password}';"
+    #p query
+    result = connection.exec(query)
+    if result.map { |users| users['user_name']} == "#{li_user_name}"
+      @reg_user = 'true'
+    else
+      @reg_user = 'false'
+    end
   end
 
   def self.username_list
