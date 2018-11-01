@@ -24,7 +24,7 @@ class Peep
     else
       conn = PG.connect( dbname: 'chitter')
     end
-    peep = conn.exec( "INSERT INTO peeps (message, time) VALUES('#{peep}', '#{time}') RETURNING id, peep, time;")
+    peep = conn.exec( "INSERT INTO peeps (peep, time) VALUES('#{peep}', '#{time}') RETURNING id, peep, time;")
     Peep.new(id: peep[0]['id'], peep: peep[0]['peep'], time: peep[0]['time'])
   end
 end

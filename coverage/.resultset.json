@@ -3,27 +3,13 @@
     "coverage": {
       "/Users/omarkhan/Chitter_challenge/spec/setup_test_database.rb": [
         1,
-        4,
+        3,
         null,
-        4,
+        3,
         null,
-        4,
+        3,
         null,
-        4,
-        null
-      ],
-      "/Users/omarkhan/Chitter_challenge/spec/features/homepage_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
+        3,
         null
       ],
       "/Users/omarkhan/Chitter_challenge/spec/features/post_peep_spec.rb": [
@@ -34,10 +20,10 @@
         1,
         1,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -74,6 +60,6 @@
         null
       ]
     },
-    "timestamp": 1541088815
+    "timestamp": 1541090110
   }
 }
