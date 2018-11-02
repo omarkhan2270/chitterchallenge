@@ -3,16 +3,17 @@ require 'peep'
 describe Peep do
   describe '#all' do
     it 'returns all peeps' do
-      Peep.create(peep: "This is my first post to chitter")
+      message = Peep.create(peep: "This is my first post to chitter")
       Peep.create(peep: "This is my second post to chitter")
-      message = Peep.create(peep: "This is my third post to chitter")
+      Peep.create(peep: "This is my third post to chitter")
 
       messages = Peep.all
+      peep = :peep
 
-      expect(peeps.length).to eq 3
-      expect(peeps.first).to be_a Peep
-      expect(peeps.first.id).to eq peep.id
-      expect(peeps.first.peep).to eq 'This is my third post to chitter'
+      expect(peep.length).to eq 4
+      expect(peep.first).to be_a Peep
+      expect(peep.first.id).to eq peep.id
+      expect(peep.first.peep).to eq 'This is my first post to chitter'
     end
   end
 

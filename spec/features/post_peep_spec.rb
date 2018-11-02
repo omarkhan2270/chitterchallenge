@@ -4,6 +4,7 @@ require 'peep'
 feature 'feature.post' do
   scenario 'Post a message to the timeline' do
     visit('/')
+    save_and_open_page
     click_button "Post"
     fill_in "peep", with: "This is my first post to chitter"
     click_button "Post"
