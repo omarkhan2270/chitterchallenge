@@ -14,7 +14,7 @@ class ChitterChallenge < Sinatra::Base
   end
 
   post '/peep' do
-    Peep.create(peep: params[:peep], time: Time.now)
+    Peep.create(peep: params[:peep])
     redirect '/'
   end
 
