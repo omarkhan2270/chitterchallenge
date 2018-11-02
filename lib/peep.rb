@@ -28,5 +28,11 @@ class Peep
   end
 
   def self.first
-  end
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect( dbname: 'Chitter_test' )
+    else
+      connection = PG.connect( dbname: 'Chitter')
+    end
+    connection.exec(' SELECT * FROM peeps')
+
 end

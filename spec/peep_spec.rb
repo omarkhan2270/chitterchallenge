@@ -1,7 +1,7 @@
 require 'peep'
 
 describe Peep do
-  describe '#all' do
+  describe '.all' do
     it 'returns all peeps' do
       message = Peep.create(peep: "This is my first post to chitter")
       Peep.create(peep: "This is my second post to chitter")
@@ -10,14 +10,14 @@ describe Peep do
       messages = Peep.all
       peep = :peep
 
-      expect(peep.length).to eq 4
-      expect(peep.first).to be_a Peep
-      expect(peep.first.id).to eq peep.id
-      expect(peep.first.peep).to eq 'This is my first post to chitter'
+      expect(Peep.length).to eq 3
+      expect(Peep.first).to be_a Peep
+      expect(Peep.first.id).to eq Peep.id
+      expect(Peep.first.peep).to eq 'This is my first post to chitter'
     end
   end
 
-  describe '#create' do
+  describe '.create' do
     it 'Adds a bookmark to our database' do
       peep = Peep.create(peep: "This is my first post to chitter")
       persisted_data = PG.connect(dbname: 'Chitter_test').exec("SELECT * FROM peeps WHERE id = #{peep.id};").to_a
