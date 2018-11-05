@@ -34,5 +34,15 @@ class Peep
       connection = PG.connect( dbname: 'Chitter')
     end
     connection.exec(' SELECT * FROM peeps')
+  end
 
+    def self.length
+      if ENV['ENVIRONMENT'] == 'test'
+        connection = PG.connect( dbname: 'Chitter_test' )
+      else
+        connection = PG.connect( dbname: 'Chitter')
+      end
+      connection.exec(' SELECT * FROM peeps')
+
+end
 end

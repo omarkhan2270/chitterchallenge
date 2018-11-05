@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/omarkhan/Chitter_challenge/spec/setup_test_database.rb": [
+      "/Users/omarkhan/chitter-challenge/spec/setup_test_database.rb": [
         1,
         3,
         null,
@@ -12,7 +12,7 @@
         3,
         null
       ],
-      "/Users/omarkhan/Chitter_challenge/spec/features/post_peep_spec.rb": [
+      "/Users/omarkhan/chitter-challenge/spec/features/post_peep_spec.rb": [
         1,
         1,
         null,
@@ -27,7 +27,7 @@
         null,
         null
       ],
-      "/Users/omarkhan/Chitter_challenge/spec/peep_spec.rb": [
+      "/Users/omarkhan/chitter-challenge/spec/peep_spec.rb": [
         1,
         null,
         1,
@@ -41,6 +41,8 @@
         1,
         null,
         1,
+        0,
+        0,
         0,
         null,
         null,
@@ -58,6 +60,6 @@
         null
       ]
     },
-    "timestamp": 1541176361
+    "timestamp": 1541410960
   }
 }
